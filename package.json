@@ -1,0 +1,30 @@
+{
+  "name": "site_constructor_js",
+  "version": "1.0.0",
+  "description": "js site constructor",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "parcel ./src/index.html -p 4200 --open",
+    "build": "parcel ./src/index.html --public-url --no-source-maps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stavbers/site_constructor_js.git"
+  },
+  "keywords": [
+    "js",
+    "site",
+    "constructor",
+    "site"
+  ],
+  "author": "stavbers reddevweb@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stavbers/site_constructor_js/issues"
+  },
+  "homepage": "https://github.com/stavbers/site_constructor_js#readme",
+  "devDependencies": {
+    "parcel": "^2.6.0",
+    "parcel-bundler": "^1.12.5"
+  }
+}
