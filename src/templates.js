@@ -13,44 +13,22 @@ function title(block) {
 }
 
 function text(block) {
-    return `
-        <div class="row">
-            <div class="col-sm">
-                <p>${block.value}</p>
-            </div>
-        </div>
-        `
+    return row(col(` <p>${block.value}</p>`))
 }
 
 function columns(block) {
-    // let html = ''
-    // block.value.forEach(item => {
-    //     html += `
-    //          <div class="col-sm">${item}</div>
-    //     `
-    // })
-    const html = block.value.map(item =>  `<div class="col-sm">${item}</div>`)
-    return `
-         <div class="row">
-                ${html.join('')}
-        </div>
-    `
+
+    // const html = block.value.map(item =>  `<div class="col-sm">${item}</div>`)
+    // const html = block.value.map(item =>  col(item)) функция как референс
+    const html = block.value.map(col)
+    return row(html.join(''))
 }
 
 function image(block) {
-    return `
-    <div class="row">
-            <img src="${block.value}" />
-        </div>
-    `
+    return row(`<img src="${block.value}" />`)
 }
 
 export const templates = {
-    // title: title,
-    // text: text,
-    // image: image,
-    // columns: columns
-
     title,
     text,
     image,
