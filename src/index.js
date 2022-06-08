@@ -22,5 +22,8 @@ model.forEach(block => {
     // else if (block.type === 'image') {
     //     html = image(block);
     // }
-    $site.insertAdjacentHTML('beforeend', html);
+
+    const toHTML = templates[block.type]
+
+    $site.insertAdjacentHTML('beforeend', toHTML(block));
 })
