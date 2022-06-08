@@ -20,7 +20,10 @@ function columns(block) {
 }
 
 function image(block) {
-    return row(`<img src="${block.value}" />`)
+    const {imageStyles, alt = '', styles} = block.options
+
+    // return row(`<img src="${block.value}" />`, css(block.options.styles))
+    return row(`<img src="${block.value}" alt="${alt}" style="${css(imageStyles)}" />`, css(styles))
 }
 
 export const templates = {

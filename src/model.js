@@ -17,5 +17,16 @@ export const model = [
             '22222222222',
             '3333333333333'
         ]},
-    {type: 'image', value: image}
+    {type: 'image', value: image, options: {
+        styles: {
+            padding: '2rem 0',
+            display: 'flex',
+            'justify-content': 'center'
+        },
+            imageStyles: {
+            width: '500px',
+            height: 'auto'
+            },
+            alt: 'this is picture'
+        }}
 ]
