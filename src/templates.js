@@ -1,15 +1,8 @@
 import {row, col} from './utils'
 
 function title(block) {
-    // return `
-    //     <div class="row">
-    //         <div class="col-sm">
-    //             <h1>${block.value}</h1>
-    //         </div>
-    //     </div>
-    //     `
-
-    return row(col(` <h1>${block.value}</h1>`))
+    const tag = block.options.tag ?? 'h1'
+    return row(col(` <${tag}>${block.value}</${tag}>`))
 }
 
 function text(block) {
