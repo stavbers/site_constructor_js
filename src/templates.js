@@ -1,11 +1,15 @@
+import {row, col} from './utils'
+
 function title(block) {
-    return `
-        <div class="row">
-            <div class="col-sm">
-                <h1>${block.value}</h1>
-            </div>
-        </div>
-        `
+    // return `
+    //     <div class="row">
+    //         <div class="col-sm">
+    //             <h1>${block.value}</h1>
+    //         </div>
+    //     </div>
+    //     `
+
+    return row(col(` <h1>${block.value}</h1>`))
 }
 
 function text(block) {
