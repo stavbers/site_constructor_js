@@ -1,4 +1,4 @@
-export function title(block) {
+function title(block) {
     return `
         <div class="row">
             <div class="col-sm">
@@ -8,7 +8,7 @@ export function title(block) {
         `
 }
 
-export function text(block) {
+function text(block) {
     return `
         <div class="row">
             <div class="col-sm">
@@ -18,7 +18,7 @@ export function text(block) {
         `
 }
 
-export function columns(block) {
+function columns(block) {
     // let html = ''
     // block.value.forEach(item => {
     //     html += `
@@ -33,10 +33,22 @@ export function columns(block) {
     `
 }
 
-export function image(block) {
+function image(block) {
     return `
     <div class="row">
             <img src="${block.value}" />
         </div>
     `
+}
+
+export const templates = {
+    // title: title,
+    // text: text,
+    // image: image,
+    // columns: columns
+
+    title,
+    text,
+    image,
+    columns
 }
